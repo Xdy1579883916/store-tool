@@ -1,17 +1,17 @@
 {
-  "name": "pkg-placeholder",
+  "name": "store-tool",
   "type": "module",
-  "version": "0.0.0",
+  "version": "1.1.0",
   "packageManager": "pnpm@9.4.0",
-  "description": "_description_",
+  "description": "store-tool 是一个 TypeScript 编写的库，旨在提供一个封装类，用于操作支持 Storage API 的实例",
   "author": "XiaDeYu <1579883916@qq.com>",
   "license": "MIT",
-  "homepage": "https://github.com/Xdy1579883916/pkg-placeholder#readme",
+  "homepage": "https://github.com/Xdy1579883916/store-tool#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Xdy1579883916/pkg-placeholder.git"
+    "url": "git+https://github.com/Xdy1579883916/store-tool.git"
   },
-  "bugs": "https://github.com/Xdy1579883916/pkg-placeholder/issues",
+  "bugs": "https://github.com/Xdy1579883916/store-tool/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -36,7 +36,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "vitest --run && unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
     "prepublishOnly": "nr build",
@@ -44,17 +44,24 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "push": "npm publish"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.22.0",
     "@antfu/ni": "^0.21.12",
     "@antfu/utils": "^0.7.10",
     "@types/node": "^20.14.10",
+    "@types/node-localstorage": "^1.3.3",
     "bumpp": "^9.4.1",
     "eslint": "^9.7.0",
     "esno": "^4.7.0",
     "lint-staged": "^15.2.7",
+    "node-localstorage": "^3.0.5",
     "pnpm": "^9.5.0",
     "rimraf": "^5.0.9",
     "simple-git-hooks": "^2.11.1",
