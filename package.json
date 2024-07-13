@@ -1,7 +1,7 @@
 {
   "name": "store-tool",
   "type": "module",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "packageManager": "pnpm@9.4.0",
   "description": "store-tool 是一个 TypeScript 编写的库，旨在提供一个封装类，用于操作支持 Storage API 的实例",
   "author": "XiaDeYu <1579883916@qq.com>",

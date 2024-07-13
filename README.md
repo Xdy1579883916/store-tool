@@ -1,5 +1,10 @@
 # store-tool 库文档
 
+[![npm version][npm-version-src]][npm-version-href]
+[![npm downloads][npm-downloads-src]][npm-downloads-href]
+[![bundle][bundle-src]][bundle-href]
+[![License][license-src]][license-href]
+
 ## 概述
 `store-tool` 是一个 TypeScript 编写的库，旨在提供一个封装类，用于操作支持 `Storage API` 的实例。
 - 支持
