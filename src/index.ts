@@ -84,7 +84,7 @@ export default class StorageToolInstance {
       return this._get()
     }
     const item = this._get([key, `${key}_expire`])
-    return item[key] || null
+    return item[key] ?? null
   }
 
   getByStrict(key?: string): any {
@@ -99,7 +99,7 @@ export default class StorageToolInstance {
       this.remove(key)
       return null
     }
-    return item[key] || null
+    return item[key] ?? null
   }
 
   findByReg(pattern: string | RegExp, mode: 'keys' | 'values' | 'entries' | 'one' = 'keys'): any {

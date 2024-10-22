@@ -104,7 +104,6 @@ it('设置可过期的值, 获取值 2.0', async () => {
   expect(local.get('name2')).toEqual(null)
   expect(Object.entries(local._get()).length).toEqual(0)
 })
-
 it('undefined value', async () => {
   // 应无法主动设置undefined值
   local.set('undefined', undefined)
@@ -116,4 +115,29 @@ it('undefined value', async () => {
   local.store.setItem('undefined', undefined)
   expect(local.store.getItem('undefined')).toEqual('undefined')
   expect(local.get('undefined')).toEqual(null)
+})
+it('假值 value 应原样返回', async () => {
+  local.set('t-0', 0)
+  expect(local.get('t-0')).toEqual(0)
+  expect(local.getByStrict('t-0')).toEqual(0)
+
+  local.set('t-false', false)
+  expect(local.get('t-false')).toEqual(false)
+  expect(local.getByStrict('t-false')).toEqual(false)
+
+  local.set('t-empty', '')
+  expect(local.get('t-empty')).toEqual('')
+  expect(local.getByStrict('t-empty')).toEqual('')
+
+  local.set('t-undefined', undefined)
+  expect(local.get('t-undefined')).toEqual(null)
+  expect(local.getByStrict('t-undefined')).toEqual(null)
+
+  expect(local.findByReg('t-*', 'entries')).toMatchInlineSnapshot(`
+    {
+      "t-0": 0,
+      "t-empty": "",
+      "t-false": false,
+    }
+  `)
 })
