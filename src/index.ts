@@ -10,7 +10,6 @@ function parseData(data: any) {
       return null
     return JSON.parse(data || '{}')
   }
-  // eslint-disable-next-line unused-imports/no-unused-vars
   catch (e) {
     return data || {}
   }

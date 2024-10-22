@@ -17,7 +17,7 @@ npm install store-tool
 ```
 
 ## 快速开始
-- 如果你对测试案例感兴趣，可直接查看 [测试文件](https://github.com/Xdy1579883916/store-tool/tree/master/src/index.test.ts), 测试用例中包含了大量示例，使用 node-localstorage 模拟 localStorage。
+- 如果你对测试案例感兴趣，可直接查看 [测试文件](test/index.test.ts), 测试用例中包含了大量示例，使用 node-localstorage 模拟 localStorage。
 - 以下是如何在你的项目中使用 `StorageToolInstance` 的基本示例：
 
 ```typescript

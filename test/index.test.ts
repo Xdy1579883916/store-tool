@@ -1,6 +1,6 @@
-import { expect, it } from 'vitest'
-
 import { LocalStorage } from 'node-localstorage'
+
+import { expect, it } from 'vitest'
 import StorageToolInstance from '../src'
 
 const localstorage = new LocalStorage('./local')
@@ -10,7 +10,6 @@ const local = new StorageToolInstance(localstorage)
 function sleep(time: number) {
   return new Promise((resolve) => {
     const timer = setTimeout(() => {
-      // eslint-disable-next-line ts/no-unused-expressions
       timer && clearTimeout(timer)
       resolve(null)
     }, time * 1000)
